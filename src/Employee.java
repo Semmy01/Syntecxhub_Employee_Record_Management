@@ -14,10 +14,6 @@ public class Employee {
         this.employeeName = employeeName;
     }
 
-    public void setEmployeeId(int employeeId) {
-        this.employeeId = employeeId;
-    }
-
     public void setDepartment(String department) {
         this.department = department;
     }
