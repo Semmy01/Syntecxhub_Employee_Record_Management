@@ -3,6 +3,7 @@ import java.util.*;
 public class EmployeeManager {
     Scanner scanner = new Scanner(System.in);
     private Map<Integer , Employee> employeeDB = new HashMap<>();
+    int employeeIdCount = 0;
 
 
     public void addEmployee(){
@@ -12,9 +13,10 @@ public class EmployeeManager {
 
         System.out.print("Enter employee department : ");
         String department = scanner.nextLine();
+        employeeIdCount++;
 
-        Employee employee = new Employee( employeeDB.size() + 1 , name , department);
-        employeeDB.put(employeeDB.size() + 1 , employee);
+        Employee employee = new Employee(employeeIdCount  , name , department);
+        employeeDB.put(employeeIdCount  , employee);
 
         System.out.println("...Employee added");
     }
